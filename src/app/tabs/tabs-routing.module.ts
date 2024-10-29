@@ -20,15 +20,35 @@ const routes: Routes = [
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
+        path: 'home',
+        loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
+      },
+      {
+        path: 'teams',
+        loadChildren: () => import('../teams/teams.module').then(m => m.TeamsPageModule)
+      },
+      {
+        path: 'search',
+        loadChildren: () => import('../search/search.module').then(m => m.SearchPageModule)
+      },
+      {
+        path: 'stats',
+        loadChildren: () => import('../stats/stats.module').then(m => m.StatsPageModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
+      },
+      {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];
