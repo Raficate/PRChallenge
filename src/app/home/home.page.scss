@@ -1,0 +1,18 @@
+.header-content {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    flex: 1; /* Añadido para que ocupe el espacio disponible */
+    
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+    }
+  
+    h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+  

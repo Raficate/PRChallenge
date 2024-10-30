@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Info</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="irAHome()">
+        <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      Como funciona PR Challenge
+    </ion-card-header>
+    <ion-card-content>
+      Actualmente puedes encontrar 4 apartados de donde obtener aleatoriamente un ejercicio para calcular un record personal (PR).
+      <p> Pesos: </p> Son ejercicios sobre todo de Crossfit en los que obtener un RM. <br>
+      <p> Distancias: </p> Retos en los que calcular el tiempo máximo en algunas distancias de distintas formas.<br>
+      <p> BodyBuilding: </p>Obtén tu RM en ejercicios típicos en tu gimnasio.<br>
+      <p> Desafíos: </p>Algunos desafíos típicos sobre todo en Crossfit con tiempo.<br>
+      <p> ¡Proximamente más ejercicios y aparados!</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Ejercicio pendiente:
+    </ion-card-header>
+    <ion-card-content>
+      Una vez que tengas un ejercicio seleccionado, no podrás elegir uno nuevo.
+      Puedes añadir una nueva marca o bien eliminar el ejercicio pendiente y volver a probar suerte.
+      Solo puede haber un ejercicio pendiente a la vez.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Búsqueda manual
+    </ion-card-header>
+    <ion-card-content>
+      Puedes elegir manualmente el ejercicio a realizar, aunque ¿no prefieres tentar a la suerte?<br>
+      🔴 Ejercicio que aún no has realizado.<br>
+      🟢 Ejercicio al que ya has añadido una nueva marca.<br>
+      🟡 Ejercicio pendiente por hacer<br>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      Ejercicios obtenidos de la web https://wodbuster.com/
+    </ion-card-content>
+  </ion-card>
+
+  <div class="button-container">
+    <ion-button color="danger" (click)="irAHome()" expand="block">VOLVER</ion-button>
+  </div>
+</ion-content>

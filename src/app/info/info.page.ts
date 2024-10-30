@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-info',
+  templateUrl: './info.page.html',
+  styleUrls: ['./info.page.scss'],
 })
-export class HomePage implements OnInit {
+export class InfoPage implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
@@ -15,8 +15,8 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
 
-  goToInfo() {
-    this.router.navigate(['/info']);
+  irAHome() {
+    this.router.navigate(['/home']);
   }
 
 }
