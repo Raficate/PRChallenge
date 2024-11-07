@@ -1,0 +1,1256 @@
+{
+    "version": 1,
+    "types":
+    [
+        {
+            "id": "1",
+            "name": "Weights"
+        },
+        {
+            "id": "2",
+            "name": "Distances"
+        },
+        {
+            "id": "3",
+            "name": "BodyBuilding"
+        },
+        {
+            "id": "4",
+            "name": "Challenges"
+        }
+    ],
+
+    "meassures":
+    [
+        {
+            "id": "1",
+            "name": "Weight1",
+            "description": "Kilograms",
+            "unit": "Kgs"
+        },
+        {
+            "id": "2",
+            "name": "Weight2",
+            "description": "Pounds",
+            "unit": "Lbs"
+        },
+        {
+            "id": "3",
+            "name": "Time1",
+            "description": "Hours-Minutes-Seconds",
+            "unit": "hh:MM:ss"
+        },
+        {
+            "id": "2",
+            "name": "Time2",
+            "description": "Minutes-Seconds-Miliseconds",
+            "unit": "MM:ss:SSS"
+        },
+        {
+            "id": "5",
+            "name": "Finish",
+            "description": "Finish",
+            "unit": "Yes/No"
+        },
+        {
+            "id": "6",
+            "name": "Rounds",
+            "description": "Rounds",
+            "unit": "Rds"
+        }
+    ],
+
+    "exercises":
+    [
+
+    {
+        "id": "1",
+        "type": 1,
+        "name": "BACK RACK REVERSE LUNGE",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "2",
+        "type": 1,
+        "name": "BACK SQUAT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "3",
+        "type": 1,
+        "name": "BACK SQUAT BARRA BAJA",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "4",
+        "type": 1,
+        "name": "BARBELL LUNGES",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "5",
+        "type": 1,
+        "name": "BENCH PRESS",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "6",
+        "type": 1,
+        "name": "BENCH ROW",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "7",
+        "type": 1,
+        "name": "BENT ROW",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "8",
+        "type": 1,
+        "name": "BICEPS CURL BARBELL",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "9",
+        "type": 1,
+        "name": "BOX SQUAT (ABOVE PARALLEL)",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "10",
+        "type": 1,
+        "name": "BOX SQUAT (BELLOW PARALLEL)",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "11",
+        "type": 1,
+        "name": "BULGARIAN SQUAT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "12",
+        "type": 1,
+        "name": "CLEAN & JERK",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "13",
+        "type": 1,
+        "name": "CLUSTER",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "14",
+        "type": 1,
+        "name": "DEADLIFT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "15",
+        "type": 1,
+        "name": "FARMER CARRY (15MTS)",
+        "description": "Peso máximo en 15m de farmer carry"
+    },
+    {
+        "id": "16",
+        "type": 1,
+        "name": "FLOOR PRESS",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "17",
+        "type": 1,
+        "name": "FRONT SQUAT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "18",
+        "type": 1,
+        "name": "FRONT RACK LUNGES",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "19",
+        "type": 1,
+        "name": "GLUTE BRIDGE BAR",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "20",
+        "type": 1,
+        "name": "GOOD MORNING",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "21",
+        "type": 1,
+        "name": "GOOD MORNING HALTEROFILIA",
+        "description": "Max 1 rep, Buenos días con sentadilla"
+    },
+    {
+        "id": "22",
+        "type": 1,
+        "name": "HANG MUSCLE SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "23",
+        "type": 1,
+        "name": "HIGH HANG POWER CLEAN",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "24",
+        "type": 1,
+        "name": "HIGH HANG POWER SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "25",
+        "type": 1,
+        "name": "HIGH HANG SQUAT CLEAN",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "26",
+        "type": 1,
+        "name": "HIGH HANG SQUAT SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "27",
+        "type": 1,
+        "name": "HIGH POWER SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "28",
+        "type": 1,
+        "name": "HIGH SQUAT SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "29",
+        "type": 1,
+        "name": "HIP THRUST",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "30",
+        "type": 1,
+        "name": "INCLINED BENCH PRESS",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "31",
+        "type": 1,
+        "name": "LOW HANG POWER CLEAN",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "32",
+        "type": 1,
+        "name": "LOW HANG POWER SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "33",
+        "type": 1,
+        "name": "LOW HANG SQUAT CLEAN",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "34",
+        "type": 1,
+        "name": "LOW HANG SQUAT SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "35",
+        "type": 1,
+        "name": "LUNGE KETTLEBELL",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "36",
+        "type": 1,
+        "name": "LUNGES MANCUERNAS",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "37",
+        "type": 1,
+        "name": "MUSCLE SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "38",
+        "type": 1,
+        "name": "MUSCLE CLEAN",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "39",
+        "type": 1,
+        "name": "NARROW GRIP BENCH PRESS",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "40",
+        "type": 1,
+        "name": "ONE HANDED SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "41",
+        "type": 1,
+        "name": "OVERHEAD LUNGES",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "42",
+        "type": 1,
+        "name": "OVERHEAD SQUAT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "43",
+        "type": 1,
+        "name": "PENDLAY ROW",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "44",
+        "type": 1,
+        "name": "PISTOL SQUAT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "45",
+        "type": 1,
+        "name": "POWER CLEAN",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "46",
+        "type": 1,
+        "name": "POWER CLUSTER",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "47",
+        "type": 1,
+        "name": "POWER HANG SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "48",
+        "type": 1,
+        "name": "POWER SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "49",
+        "type": 1,
+        "name": "PUSH JERK",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "50",
+        "type": 1,
+        "name": "PUSH PRESS",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "51",
+        "type": 1,
+        "name": "PUSH UP",
+        "description": "Maximo peso lastrado"
+    },
+    {
+        "id": "52",
+        "type": 1,
+        "name": "RACK PULL",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "53",
+        "type": 1,
+        "name": "ROMANIAN DEADLIFT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "54",
+        "type": 1,
+        "name": "SAFETY BAR SQUAT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "55",
+        "type": 1,
+        "name": "SANDBAG CLEAN",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "56",
+        "type": 1,
+        "name": "SEAL ROW",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "57",
+        "type": 1,
+        "name": "SEMI SUMO DEADLIFT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "58",
+        "type": 1,
+        "name": "SHOULDER PRESS",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "59",
+        "type": 1,
+        "name": "SLIGHTLY INCLINED SHOULDER PRESS (BARRA)",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "60",
+        "type": 1,
+        "name": "SLIGHTLY INCLINED SHOULDER PRESS (MANCUERNAS)",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "61",
+        "type": 1,
+        "name": "SNATCH DEADLIFT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "62",
+        "type": 1,
+        "name": "SNATCH BALANCE",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "63",
+        "type": 1,
+        "name": "SPLIT JERK",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "64",
+        "type": 1,
+        "name": "SQUAT CLEAN",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "65",
+        "type": 1,
+        "name": "SQUAT HANG CLEAN",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "66",
+        "type": 1,
+        "name": "SQUAT HANG SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "67",
+        "type": 1,
+        "name": "SQUAR SNATCH",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "68",
+        "type": 1,
+        "name": "STRAIGHT SEATED SHOULDER PRESS",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "69",
+        "type": 1,
+        "name": "STRICT PRESS",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "70",
+        "type": 1,
+        "name": "SUMO DEADLIFT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "71",
+        "type": 1,
+        "name": "SUMO DEADLIFT HIGH PULL",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "72",
+        "type": 1,
+        "name": "THRUSTER",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "73",
+        "type": 1,
+        "name": "TRAP BAR DEADLIFT",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "74",
+        "type": 1,
+        "name": "TURKISH GET-UP",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "75",
+        "type": 1,
+        "name": "WEIGHTED CHEST TO BAR",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "76",
+        "type": 1,
+        "name": "WEIGHTED PULL-UP SUPINA",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "77",
+        "type": 1,
+        "name": "WEIGHTED PULL-UP PRONA",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "78",
+        "type": 1,
+        "name": "WEIGHTED RING-DIP",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "79",
+        "type": 1,
+        "name": "YUKE CARRI (15 MIN)",
+        "description": "Max 1 rep"
+    },
+    {
+        "id": "80",
+        "type": 1,
+        "name": "ZERCHER SQUAT",
+        "description": "Peso máximo en 15m de farmer carry"
+    },
+    {
+        "id": "81",
+        "type": 2,
+        "name": "1 KM RUN",
+        "description": "Run 1 kilometer for time."
+    },
+    {
+        "id": "82",
+        "type": 2,
+        "name": "1 MILE RUN",
+        "description": "Run 1 mile (1.6 km) for time."
+    },
+    {
+        "id": "83",
+        "type": 2,
+        "name": "1/2 MARATHON ASSAULT BIKE",
+        "description": "Assault Bike 21,097 meters for time."
+    },
+    {
+        "id": "84",
+        "type": 2,
+        "name": "1/2 MARATHON ROW",
+        "description": "Row 21,097 meters for time."
+    },
+    {
+        "id": "85",
+        "type": 2,
+        "name": "1/2 MARATHON RUN",
+        "description": "Run 21,097 meters for time."
+    },
+    {
+        "id": "86",
+        "type": 2,
+        "name": "1/2 MARATÓN SKIERG",
+        "description": "21km skierg"
+    },
+    {
+        "id": "87",
+        "type": 2,
+        "name": "10 KM RUN",
+        "description": "Run 10 kilometers for time."
+    },
+    {
+        "id": "88",
+        "type": 2,
+        "name": "100 M RUN",
+        "description": "Run 100 meters for time."
+    },
+    {
+        "id": "89",
+        "type": 2,
+        "name": "100 M SWIM",
+        "description": "Swim 100 meters for time. Any style."
+    },
+    {
+        "id": "90",
+        "type": 2,
+        "name": "1000 M ASSAULT BIKE",
+        "description": "Assault Bike 1000 meters for time."
+    },
+    {
+        "id": "91",
+        "type": 2,
+        "name": "1000 M ROW",
+        "description": "Row 1000 meters for time."
+    },
+    {
+        "id": "92",
+        "type": 2,
+        "name": "1000 M SWIM",
+        "description": "Swim 1000 meters for time. Any style."
+    },
+    {
+        "id": "93",
+        "type": 2,
+        "name": "10000 M ROW",
+        "description": "Row 10 kilometers for time"
+    },
+    {
+        "id": "94",
+        "type": 2,
+        "name": "10000 M ASSAULT BIKE",
+        "description": "Assault Bike 10 kilometers for time"
+    },
+    {
+        "id": "95",
+        "type": 2,
+        "name": "1500 M SWIM",
+        "description": "Swim 1500 meters for time. Any style."
+    },
+    {
+        "id": "96",
+        "type": 2,
+        "name": "1500M ROW",
+        "description": "For time 1500"
+    },
+    {
+        "id": "97",
+        "type": 2,
+        "name": "1500M RUN",
+        "description": "For Time:1500m Run"
+    },
+    {
+        "id": "98",
+        "type": 2,
+        "name": "2 KM RUN",
+        "description": "Run 2 kilometers for time."
+    },
+    {
+        "id": "99",
+        "type": 2,
+        "name": "200 M RUN",
+        "description": "Run 200 meters for time."
+    },
+    {
+        "id": "100",
+        "type": 2,
+        "name": "200 M SWIM",
+        "description": "Swim 200 meters for time. Any style."
+    },
+    {
+        "id": "101",
+        "type": 2,
+        "name": "2000 M ASSAULT BIKE",
+        "description": "Assault Bike 2 kilometers for time."
+    },
+    {
+        "id": "102",
+        "type": 2,
+        "name": "2000 M ROW",
+        "description": "Row 2 kilometers for time."
+    },
+    {
+        "id": "103",
+        "type": 2,
+        "name": "3 KM RUN",
+        "description": "Run 3 kilometers for time."
+    },
+    {
+        "id": "104",
+        "type": 2,
+        "name": "300 METROS RUN",
+        "description": "For time: 300 metros run"
+    },
+    {
+        "id": "105",
+        "type": 2,
+        "name": "3000M ROW",
+        "description": "Row 3 kilometers for time."
+    },
+    {
+        "id": "106",
+        "type": 2,
+        "name": "4 KM RUN",
+        "description": "Run 4 kilometers for time."
+    },
+    {
+        "id": "107",
+        "type": 2,
+        "name": "400 M RUN",
+        "description": "Run 400 meters for time."
+    },
+    {
+        "id": "108",
+        "type": 2,
+        "name": "400 M SWIM",
+        "description": "Swim 400 meters for time. Any style."
+    },
+    {
+        "id": "109",
+        "type": 2,
+        "name": "5 KM RUN",
+        "description": "Run 5 kilometers for time."
+    },
+    {
+        "id": "110",
+        "type": 2,
+        "name": "50 M SWIM",
+        "description": "Swim 50 meters for time. Any style."
+    },
+    {
+        "id": "111",
+        "type": 2,
+        "name": "500 M ASSAULT BIKE",
+        "description": "Assault Bike 500 meters for time."
+    },
+    {
+        "id": "112",
+        "type": 2,
+        "name": "500 M ROW",
+        "description": "Row 500 meters for time."
+    },
+    {
+        "id": "113",
+        "type": 2,
+        "name": "500 M SWIM",
+        "description": "Swim 500 meters for time. Any style."
+    },
+    {
+        "id": "114",
+        "type": 2,
+        "name": "5000 M ASSAULT BIKE",
+        "description": "Assault Bike 5000 meters for time."
+    },
+    {
+        "id": "115",
+        "type": 2,
+        "name": "5000 M ROW",
+        "description": "Row 5000 meters for time."
+    },
+    {
+        "id": "116",
+        "type": 2,
+        "name": "5000M BIKEERG",
+        "description": "For time: 5000 m Bikeerg"
+    },
+    {
+        "id": "117",
+        "type": 2,
+        "name": "800 M RUN",
+        "description": "Run 800 meters for time."
+    },
+    {
+        "id": "118",
+        "type": 2,
+        "name": "800 M SWIM",
+        "description": "Swim 800 meters for time. Any style."
+    },
+    {
+        "id": "119",
+        "type": 2,
+        "name": "8000 M ROW",
+        "description": "Row 8000 meters for time."
+    },
+    {
+        "id": "120",
+        "type": 2,
+        "name": "BIKEERG 10.000M",
+        "description": "For Time : 10.000m"
+    },
+    {
+        "id": "121",
+        "type": 2,
+        "name": "BIKEERG 1000M",
+        "description": "Time 1000m"
+    },
+    {
+        "id": "122",
+        "type": 2,
+        "name": "BIKEERG 2000M",
+        "description": "Time 2000m"
+    },
+    {
+        "id": "123",
+        "type": 2,
+        "name": "BIKEERG 500M",
+        "description": "Time 500m"
+    },
+    {
+        "id": "124",
+        "type": 2,
+        "name": "BIKEERG 8000M",
+        "description": "Time 8000m"
+    },
+    {
+        "id": "125",
+        "type": 2,
+        "name": "SKIERG 10.000M",
+        "description": "For Time : 10.000m"
+    },
+    {
+        "id": "126",
+        "type": 2,
+        "name": "SKIERG 1000M",
+        "description": "For Time : 1000m"
+    },
+    {
+        "id": "127",
+        "type": 2,
+        "name": "SKIERG 500M",
+        "description": "For Time : 500m"
+    },
+    {
+        "id": "128",
+        "type": 2,
+        "name": "SKIERG 8000M",
+        "description": "For Time : 8000m"
+    },
+    {
+        "id": "129",
+        "type": 2,
+        "name": "SKIERG 2000M",
+        "description": "For Time : 2000m"
+    },
+    {
+        "id": "130",
+        "type": 3,
+        "name": "CURL BÍCEPS MANCUERNAS",
+        "description": "max. peso"
+    },
+    {
+        "id": "131",
+        "type": 3,
+        "name": "CURL FEMORAL",
+        "description": "max. peso"
+    },
+    {
+        "id": "132",
+        "type": 3,
+        "name": "DB MONSTER WALK",
+        "description": "max. repeticiones"
+    },
+    {
+        "id": "133",
+        "type": 3,
+        "name": "GLOBET SQUAT",
+        "description": "max. repeticiones"
+    },
+    {
+        "id": "134",
+        "type": 3,
+        "name": "DB THRUSTER",
+        "description": "max. repeticiones"
+    },
+    {
+        "id": "135",
+        "type": 3,
+        "name": "EXTENSIÓN CUÁDRICEPS",
+        "description": "max. peso"
+    },
+    {
+        "id": "136",
+        "type": 3,
+        "name": "JALON EN POLEA CON AGARRE CERRADO",
+        "description": "max. peso"
+    },
+    {
+        "id": "137",
+        "type": 3,
+        "name": "HACK",
+        "description": "max. peso Hack"
+    },
+    {
+        "id": "138",
+        "type": 3,
+        "name": "JALON EN POLEA CON AGARRE ABIERTO",
+        "description": "max. peso"
+    },
+    {
+        "id": "139",
+        "type": 3,
+        "name": "LEG PRESS",
+        "description": "max. peso Leg press"
+    },
+    {
+        "id": "140",
+        "type": 3,
+        "name": "JALON EN POLEA CON AGARRE INVERSO",
+        "description": "max. peso"
+    },
+    {
+        "id": "141",
+        "type": 3,
+        "name": "LANDMINE ROW",
+        "description": "Max. Peso"
+    },
+    {
+        "id": "142",
+        "type": 3,
+        "name": "PULL TROUGTH",
+        "description": "max. peso"
+    },
+    {
+        "id": "143",
+        "type": 3,
+        "name": "PATADA DE GLÚTEO LATERAL",
+        "description": "max. peso"
+    },
+    {
+        "id": "144",
+        "type": 3,
+        "name": "PATADA DE GLÚTEO",
+        "description": "max. peso"
+    },
+    {
+        "id": "145",
+        "type": 3,
+        "name": "REMO CON MANCUERNA",
+        "description": "max. peso"
+    },
+    {
+        "id": "146",
+        "type": 3,
+        "name": "REMO EN POLEA ALTA A UNA MANO",
+        "description": "max.peso"
+    },
+    {
+        "id": "147",
+        "type": 3,
+        "name": "PULLOVER DE PIE EN POLEA ALTA",
+        "description": "max. peso"
+    },
+    {
+        "id": "148",
+        "type": 3,
+        "name": "ROMANIAN DEADLIFT DB",
+        "description": "max. repeticiones"
+    },
+    {
+        "id": "149",
+        "type": 3,
+        "name": "SENTADILLA CON AGARRE EN POLEA BAJA",
+        "description": "max. peso"
+    },
+    {
+        "id": "150",
+        "type": 3,
+        "name": "ROMANIAN DEADLIFT EN POLEA BAJA",
+        "description": "max. peso"
+    },
+    {
+        "id": "151",
+        "type": 3,
+        "name": "WOMAN MAKER DB",
+        "description": "max. repeticiones"
+    },
+    {
+        "id": "152",
+        "type": 4,
+        "name": "100 AIR SQUAT",
+        "description": "For time: 100 Air squat"
+    },
+    {
+        "id": "153",
+        "type": 4,
+        "name": "100 CAL ROW",
+        "description": "For time"
+    },
+    {
+        "id": "154",
+        "type": 4,
+        "name": "100 PULL-UPS",
+        "description": "For time: 100 pull ups"
+    },
+    {
+        "id": "155",
+        "type": 4,
+        "name": "100 TOES TO BAR",
+        "description": "For time: 100 Toes to Bar"
+    },
+    {
+        "id": "156",
+        "type": 4,
+        "name": "100 BURPEES",
+        "description": "For time: 100 burpees"
+    },
+    {
+        "id": "157",
+        "type": 4,
+        "name": "100 CAL ASSAULT BIKE",
+        "description": "100 cal Assault Bike for time"
+    },
+    {
+        "id": "158",
+        "type": 4,
+        "name": "100 CAL ECHO BIKE",
+        "description": "For time 100 cal"
+    },
+    {
+        "id": "159",
+        "type": 4,
+        "name": "100 PUSH UPS",
+        "description": "For time: 100 push ups"
+    },
+    {
+        "id": "160",
+        "type": 4,
+        "name": "1000 CAL ASSAULT BIKE",
+        "description": "1000 cal Assault Bike for time"
+    },
+    {
+        "id": "161",
+        "type": 4,
+        "name": "1000 CAL ECHO BIKE",
+        "description": "For time: 1000 cals"
+    },
+    {
+        "id": "162",
+        "type": 4,
+        "name": "1000 CAL ROW",
+        "description": "1000 cal row for time"
+    },
+    {
+        "id": "163",
+        "type": 4,
+        "name": "20 CAL ASSAULT BIKE",
+        "description": "For time 20 cal."
+    },
+    {
+        "id": "164",
+        "type": 4,
+        "name": "20 CAL ECHO BIKE",
+        "description": "For time 20 cal."
+    },
+    {
+        "id": "165",
+        "type": 4,
+        "name": "2500 M ROW",
+        "description": "For Time"
+    },
+    {
+        "id": "166",
+        "type": 4,
+        "name": "30 CAL ASSAULT BIKE",
+        "description": "For time 30 cal."
+    },
+    {
+        "id": "167",
+        "type": 4,
+        "name": "30 CAL ROW",
+        "description": "30 cal row for time"
+    },
+    {
+        "id": "168",
+        "type": 4,
+        "name": "30/20 CAL SKIERG",
+        "description": "For time: 30/20 Cal Skierg"
+    },
+    {
+        "id": "169",
+        "type": 4,
+        "name": "30 CAL ECHO BIKE",
+        "description": "For time: 30 cal."
+    },
+    {
+        "id": "170",
+        "type": 4,
+        "name": "40 CAL ROW",
+        "description": "40 cal row for time"
+    },
+    {
+        "id": "171",
+        "type": 4,
+        "name": "40/30 CAL SKIERG",
+        "description": "For time: 40/30 Cal Skierg"
+    },
+    {
+        "id": "172",
+        "type": 4,
+        "name": "50 BOX JUMP",
+        "description": "For Time: 50 Box Jump"
+    },
+    {
+        "id": "173",
+        "type": 4,
+        "name": "50 CAL ASSAULT BIKE",
+        "description": "For Time: 50 Cal Assault Bike"
+    },
+    {
+        "id": "174",
+        "type": 4,
+        "name": "50 BURPEES",
+        "description": "50 burpees for time"
+    },
+    {
+        "id": "175",
+        "type": 4,
+        "name": "500 CAL ASSAULT BIKE",
+        "description": "500 cal Assault Bike for time"
+    },
+    {
+        "id": "176",
+        "type": 4,
+        "name": "500 CAL ROW",
+        "description": "500 cal row for time"
+    },
+    {
+        "id": "177",
+        "type": 4,
+        "name": "500 CAL ECHO BIKE",
+        "description": "For time: 500 cal"
+    },
+    {
+        "id": "178",
+        "type": 4,
+        "name": "BOX JUMP CHALLENGE",
+        "description": "Max height in cm"
+    },
+    {
+        "id": "179",
+        "type": 4,
+        "name": "BURPEE NAVETTE",
+        "description": "Max rounds: Burpee + 10 m Shuttle Runs"
+    },
+    {
+        "id": "180",
+        "type": 4,
+        "name": "CHEST TO BAR",
+        "description": "Max reps"
+    },
+    {
+        "id": "181",
+        "type": 4,
+        "name": "DOUBLE UNDERS",
+        "description": "Max reps"
+    },
+    {
+        "id": "182",
+        "type": 4,
+        "name": "MAX CAL ASSAULT BIKE IN 1 MIN",
+        "description": "1 minute max calorie Assault Bike"
+    },
+    {
+        "id": "183",
+        "type": 4,
+        "name": "MAX CAL ASSAULT BIKE IN 30 SECONS",
+        "description": "Max cals"
+    },
+    {
+        "id": "184",
+        "type": 4,
+        "name": "MAX CAL ECHO BIKE IN 1 MIN",
+        "description": "1 minute max calorie Echo Bike"
+    },
+    {
+        "id": "185",
+        "type": 4,
+        "name": "MAX. REPS BOX JUMP IN 1 MIN",
+        "description": "In a 1 minute max reps box jump"
+    },
+    {
+        "id": "186",
+        "type": 4,
+        "name": "MAX CAL ROW IN 1 MIN",
+        "description": "1 minute max calorie row"
+    },
+    {
+        "id": "187",
+        "type": 4,
+        "name": "MAX. REPS BURPEES IN 1 MIN",
+        "description": "Max. Reps burpees"
+    },
+    {
+        "id": "188",
+        "type": 4,
+        "name": "MAX. REPS PUSH UPS IN 1 MIN",
+        "description": "In 1 minute max reps push ups"
+    },
+    {
+        "id": "189",
+        "type": 4,
+        "name": "MAX. REPS PULL UPS IN 1 MIN",
+        "description": "In a 1 minute max reps pull ups"
+    },
+    {
+        "id": "190",
+        "type": 4,
+        "name": "MAX. REPS SINGLE UNDER IN 1 MIN",
+        "description": "In a 1 minute max reps single under"
+    },
+    {
+        "id": "191",
+        "type": 4,
+        "name": "MAX. TOES TO BAR UNBROKEN",
+        "description": "Máximos Toes to Bar Unbroken"
+    },
+    {
+        "id": "192",
+        "type": 4,
+        "name": "MAX. REPS DOBLE UNDER IN 1 MIN",
+        "description": "In 1 minute max reps doble under"
+    },
+    {
+        "id": "193",
+        "type": 4,
+        "name": "MAX. TOES TO BAR IN 1 MIN",
+        "description": "Max. Toes to Bar in 1 min"
+    },
+    {
+        "id": "194",
+        "type": 4,
+        "name": "PUSH-UPS",
+        "description": "Max reps"
+    },
+    {
+        "id": "195",
+        "type": 4,
+        "name": "PULL-UPS",
+        "description": "Max reps unbroken"
+    },
+    {
+        "id": "196",
+        "type": 4,
+        "name": "SQUAT JUMP",
+        "description": "Maximos Squat Jump"
+    },
+    {
+        "id": "197",
+        "type": 4,
+        "name": "STRICT PULL-UPS",
+        "description": "Max reps"
+    },
+    {
+        "id": "198",
+        "type": 4,
+        "name": "LONG JUMP CHALLENGE",
+        "description": "Max distance long jump from standing position."
+    }
+    
+]
+}
