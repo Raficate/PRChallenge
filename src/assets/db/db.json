@@ -1,0 +1,1759 @@
+{
+    "database": "prchallenge.db",
+    "version": 1,
+    "encrypted": false,
+    "mode": "full",
+    "tables": [
+        {
+            "name": "types",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "name",
+                    "value": "TEXT NOT NULL"
+                }
+            ],
+            "values": [
+                [
+                    1,
+                    "Weights"
+                ],
+                [
+                    2,
+                    "Distances"
+                ],
+                [
+                    3,
+                    "BodyBuilding"
+                ],
+                [
+                    4,
+                    "Challenges"
+                ]
+            ]
+        },
+        {
+            "name": "measures",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "name",
+                    "value": "TEXT NOT NULL"
+                },
+                {
+                    "column": "description",
+                    "value": "TEXT"
+                },
+                {
+                    "column": "unit",
+                    "value": "TEXT"
+                }
+            ],
+            "values": [
+                [
+                    1,
+                    "Weight",
+                    "Kilograms/Pounds",
+                    "Kgs/Lbs"
+                ],
+                [
+                    2,
+                    "Time1",
+                    "Hours-Minutes-Seconds",
+                    "hh:MM:ss"
+                ],
+                [
+                    3,
+                    "Time2",
+                    "Minutes-Seconds-Milliseconds",
+                    "MM:ss:SSS"
+                ],
+                [
+                    4,
+                    "Finish",
+                    "Finish",
+                    "Yes/No"
+                ],
+                [
+                    5,
+                    "Rounds",
+                    "Rounds",
+                    "Rds"
+                ]
+            ]
+        },
+        {
+            "name": "exercises",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "name",
+                    "value": "TEXT NOT NULL"
+                },
+                {
+                    "column": "description",
+                    "value": "TEXT"
+                },
+                {
+                    "column": "id_type",
+                    "value": "INTEGER",
+                    "foreignkey": "types(id)"
+                },
+                {
+                    "column": "id_measure",
+                    "value": "INTEGER",
+                    "foreignkey": "measures(id)"
+                },
+                {
+                    "column": "media",
+                    "value": "TEXT"
+                }
+            ],
+            "values": [
+                [
+                    1,
+                    "Back Rack Reverse Lunge",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    2,
+                    "Back Squat",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    3,
+                    "Back Squat Barra Baja",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    4,
+                    "Barbell Lunges",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    5,
+                    "Bench Press",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    6,
+                    "Bench Row",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    7,
+                    "Bent Row",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    8,
+                    "Biceps Curl Barbell",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    9,
+                    "Box Squat (Above Parallel)",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    10,
+                    "Box Squat (Below Parallel)",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    11,
+                    "Bulgarian Squat",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    12,
+                    "Clean & Jerk",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    13,
+                    "Cluster",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    14,
+                    "Deadlift",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    15,
+                    "Farmer Carry (15mts)",
+                    "Peso máximo en 15m de farmer carry",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    16,
+                    "Floor Press",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    17,
+                    "Front Squat",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    18,
+                    "Front Rack Lunges",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    19,
+                    "Glute Bridge Bar",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    20,
+                    "Good Morning",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    21,
+                    "Good Morning Halterofilia",
+                    "Max 1 rep, Buenos días con sentadilla",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    22,
+                    "Hang Muscle Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    23,
+                    "High Hang Power Clean",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    24,
+                    "High Hang Power Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    25,
+                    "High Hang Squat Clean",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    26,
+                    "High Hang Squat Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    27,
+                    "High Power Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    28,
+                    "High Squat Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    29,
+                    "Hip Thrust",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    30,
+                    "Inclined Bench Press",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    31,
+                    "Low Hang Power Clean",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    32,
+                    "Low Hang Power Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    33,
+                    "Low Hang Squat Clean",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    34,
+                    "Low Hang Squat Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    35,
+                    "Lunge Kettlebell",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    36,
+                    "Lunges Mancuernas",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    37,
+                    "Muscle Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    38,
+                    "Muscle Clean",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    39,
+                    "Narrow Grip Bench Press",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    40,
+                    "One Handed Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    41,
+                    "Overhead Lunges",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    42,
+                    "Overhead Squat",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    43,
+                    "Pendlay Row",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    44,
+                    "Pistol Squat",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    45,
+                    "Power Clean",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    46,
+                    "Power Cluster",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    47,
+                    "Power Hang Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    48,
+                    "Power Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    49,
+                    "Push Jerk",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    50,
+                    "Push Press",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    51,
+                    "Push Up",
+                    "Máximo peso lastrado",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    52,
+                    "Rack Pull",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    53,
+                    "Romanian Deadlift",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    54,
+                    "Safety Bar Squat",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    55,
+                    "Sandbag Clean",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    56,
+                    "Seal Row",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    57,
+                    "Semi Sumo Deadlift",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    58,
+                    "Shoulder Press",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    59,
+                    "Slightly Inclined Shoulder Press (Barra)",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    60,
+                    "Slightly Inclined Shoulder Press (Mancuernas)",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    61,
+                    "Snatch Deadlift",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    62,
+                    "Snatch Balance",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    63,
+                    "Split Jerk",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    64,
+                    "Squat Clean",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    65,
+                    "Squat Hang Clean",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    66,
+                    "Squat Hang Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    67,
+                    "Squar Snatch",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    68,
+                    "Straight Seated Shoulder Press",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    69,
+                    "Strict Press",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    70,
+                    "Sumo Deadlift",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    71,
+                    "Sumo Deadlift High Pull",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    72,
+                    "Thruster",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    73,
+                    "Trap Bar Deadlift",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    74,
+                    "Turkish Get-Up",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    75,
+                    "Weighted Chest To Bar",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    76,
+                    "Weighted Pull-Up Supina",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    77,
+                    "Weighted Pull-Up Prona",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    78,
+                    "Weighted Ring-Dip",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    79,
+                    "Yuke Carri (15 Min)",
+                    "Max 1 rep",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    80,
+                    "Zercher Squat",
+                    "Peso máximo en 15m de farmer carry",
+                    1,
+                    1,
+                    ""
+                ],
+                [
+                    81,
+                    "1 Km Run",
+                    "Run 1 kilometer for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    82,
+                    "1 Mile Run",
+                    "Run 1 mile (1.6 km) for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    83,
+                    "1/2 Marathon Assault Bike",
+                    "Assault Bike 21,097 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    84,
+                    "1/2 Marathon Row",
+                    "Row 21,097 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    85,
+                    "1/2 Marathon Run",
+                    "Run 21,097 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    86,
+                    "1/2 Maratón Skierg",
+                    "21km skierg",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    87,
+                    "10 Km Run",
+                    "Run 10 kilometers for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    88,
+                    "100 M Run",
+                    "Run 100 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    89,
+                    "100 M Swim",
+                    "Swim 100 meters for time. Any style.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    90,
+                    "1000 M Assault Bike",
+                    "Assault Bike 1000 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    91,
+                    "1000 M Row",
+                    "Row 1000 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    92,
+                    "1000 M Swim",
+                    "Swim 1000 meters for time. Any style.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    93,
+                    "10000 M Row",
+                    "Row 10 kilometers for time",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    94,
+                    "10000 M Assault Bike",
+                    "Assault Bike 10 kilometers for time",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    95,
+                    "1500 M Swim",
+                    "Swim 1500 meters for time. Any style.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    96,
+                    "1500m Row",
+                    "For time 1500",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    97,
+                    "1500m Run",
+                    "For Time:1500m Run",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    98,
+                    "2 Km Run",
+                    "Run 2 kilometers for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    99,
+                    "200 M Run",
+                    "Run 200 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    100,
+                    "200 M Swim",
+                    "Swim 200 meters for time. Any style.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    101,
+                    "2000 M Assault Bike",
+                    "Assault Bike 2 kilometers for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    102,
+                    "2000 M Row",
+                    "Row 2 kilometers for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    103,
+                    "3 Km Run",
+                    "Run 3 kilometers for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    104,
+                    "300 Metros Run",
+                    "For time: 300 metros run",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    105,
+                    "3000m Row",
+                    "Row 3 kilometers for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    106,
+                    "4 Km Run",
+                    "Run 4 kilometers for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    107,
+                    "400 M Run",
+                    "Run 400 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    108,
+                    "400 M Swim",
+                    "Swim 400 meters for time. Any style.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    109,
+                    "5 Km Run",
+                    "Run 5 kilometers for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    110,
+                    "50 M Swim",
+                    "Swim 50 meters for time. Any style.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    111,
+                    "500 M Assault Bike",
+                    "Assault Bike 500 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    112,
+                    "500 M Row",
+                    "Row 500 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    113,
+                    "500 M Swim",
+                    "Swim 500 meters for time. Any style.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    114,
+                    "5000 M Assault Bike",
+                    "Assault Bike 5000 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    115,
+                    "5000 M Row",
+                    "Row 5000 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    116,
+                    "5000m Bikeerg",
+                    "For time: 5000 m Bikeerg",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    117,
+                    "800 M Run",
+                    "Run 800 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    118,
+                    "800 M Swim",
+                    "Swim 800 meters for time. Any style.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    119,
+                    "8000 M Row",
+                    "Row 8000 meters for time.",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    120,
+                    "Bikeerg 10.000m",
+                    "For Time : 10.000m",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    121,
+                    "Bikeerg 1000m",
+                    "Time 1000m",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    122,
+                    "Bikeerg 2000m",
+                    "Time 2000m",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    123,
+                    "Bikeerg 500m",
+                    "Time 500m",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    124,
+                    "Bikeerg 8000m",
+                    "Time 8000m",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    125,
+                    "Skierg 10.000m",
+                    "For Time : 10.000m",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    126,
+                    "Skierg 1000m",
+                    "For Time : 1000m",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    127,
+                    "Skierg 500m",
+                    "For Time : 500m",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    128,
+                    "Skierg 8000m",
+                    "For Time : 8000m",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    129,
+                    "Skierg 2000m",
+                    "For Time : 2000m",
+                    2,
+                    1,
+                    ""
+                ],
+                [
+                    130,
+                    "Curl Bíceps Mancuernas",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    131,
+                    "Curl Femoral",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    132,
+                    "Db Monster Walk",
+                    "max. repeticiones",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    133,
+                    "Globet Squat",
+                    "max. repeticiones",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    134,
+                    "Db Thruster",
+                    "max. repeticiones",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    135,
+                    "Extensión Cuádriceps",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    136,
+                    "Jalon En Polea Con Agarre Cerrado",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    137,
+                    "Hack",
+                    "max. peso Hack",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    138,
+                    "Jalon En Polea Con Agarre Abierto",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    139,
+                    "Leg Press",
+                    "max. peso Leg press",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    140,
+                    "Jalon En Polea Con Agarre Inverso",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    141,
+                    "Landmine Row",
+                    "Max. Peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    142,
+                    "Pull Trough",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    143,
+                    "Patada De Glúteo Lateral",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    144,
+                    "Patada De Glúteo",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    145,
+                    "Remo Con Mancuerna",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    146,
+                    "Remo En Polea Alta A Una Mano",
+                    "max.peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    147,
+                    "Pullover De Pie En Polea Alta",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    148,
+                    "Romanian Deadlift Db",
+                    "max. repeticiones",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    149,
+                    "Sentadilla Con Agarre En Polea Baja",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    150,
+                    "Romanian Deadlift En Polea Baja",
+                    "max. peso",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    151,
+                    "Woman Maker Db",
+                    "max. repeticiones",
+                    3,
+                    1,
+                    ""
+                ],
+                [
+                    152,
+                    "100 Air Squat",
+                    "For time: 100 Air squat",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    153,
+                    "100 Cal Row",
+                    "For time",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    154,
+                    "100 Pull-Ups",
+                    "For time: 100 pull ups",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    155,
+                    "100 Toes To Bar",
+                    "For time: 100 Toes to Bar",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    156,
+                    "100 Burpees",
+                    "For time: 100 burpees",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    157,
+                    "100 Cal Assault Bike",
+                    "100 cal Assault Bike for time",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    158,
+                    "100 Cal Echo Bike",
+                    "For time 100 cal",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    159,
+                    "100 Push Ups",
+                    "For time: 100 push ups",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    160,
+                    "1000 Cal Assault Bike",
+                    "1000 cal Assault Bike for time",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    161,
+                    "1000 Cal Echo Bike",
+                    "For time: 1000 cals",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    162,
+                    "1000 Cal Row",
+                    "1000 cal row for time",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    163,
+                    "20 Cal Assault Bike",
+                    "For time 20 cal.",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    164,
+                    "20 Cal Echo Bike",
+                    "For time 20 cal.",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    165,
+                    "2500 M Row",
+                    "For Time",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    166,
+                    "30 Cal Assault Bike",
+                    "For time 30 cal.",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    167,
+                    "30 Cal Row",
+                    "30 cal row for time",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    168,
+                    "30/20 Cal Skierg",
+                    "For time: 30/20 Cal Skierg",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    169,
+                    "30 Cal Echo Bike",
+                    "For time: 30 cal.",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    170,
+                    "40 Cal Row",
+                    "40 cal row for time",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    171,
+                    "40/30 Cal Skierg",
+                    "For time: 40/30 Cal Skierg",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    172,
+                    "50 Box Jump",
+                    "For Time: 50 Box Jump",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    173,
+                    "50 Cal Assault Bike",
+                    "For Time: 50 Cal Assault Bike",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    174,
+                    "50 Burpees",
+                    "50 burpees for time",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    175,
+                    "500 Cal Assault Bike",
+                    "500 cal Assault Bike for time",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    176,
+                    "500 Cal Row",
+                    "500 cal row for time",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    177,
+                    "500 Cal Echo Bike",
+                    "For time: 500 cal",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    178,
+                    "Box Jump Challenge",
+                    "Max height in cm",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    179,
+                    "Burpee Navette",
+                    "Max rounds: Burpee + 10 m Shuttle Runs",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    180,
+                    "Chest To Bar",
+                    "Max reps",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    181,
+                    "Double Unders",
+                    "Max reps",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    182,
+                    "Max Cal Assault Bike In 1 Min",
+                    "1 minute max calorie Assault Bike",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    183,
+                    "Max Cal Assault Bike In 30 Secs",
+                    "Max cals",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    184,
+                    "Max Cal Echo Bike In 1 Min",
+                    "1 minute max calorie Echo Bike",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    185,
+                    "Max. Reps Box Jump In 1 Min",
+                    "In a 1 minute max reps box jump",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    186,
+                    "Max Cal Row In 1 Min",
+                    "1 minute max calorie row",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    187,
+                    "Max. Reps Burpees In 1 Min",
+                    "Max. Reps burpees",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    188,
+                    "Max. Reps Push Ups In 1 Min",
+                    "In 1 minute max reps push ups",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    189,
+                    "Max. Reps Pull Ups In 1 Min",
+                    "In a 1 minute max reps pull ups",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    190,
+                    "Max. Reps Single Under In 1 Min",
+                    "In a 1 minute max reps single under",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    191,
+                    "Max. Toes To Bar Unbroken",
+                    "Máximos Toes to Bar Unbroken",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    192,
+                    "Max. Reps Doble Under In 1 Min",
+                    "In 1 minute max reps doble under",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    193,
+                    "Max. Toes To Bar In 1 Min",
+                    "Max. Toes to Bar in 1 min",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    194,
+                    "Push-Ups",
+                    "Max reps",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    195,
+                    "Pull-Ups",
+                    "Max reps unbroken",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    196,
+                    "Squat Jump",
+                    "Máximos Squat Jump",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    197,
+                    "Strict Pull-Ups",
+                    "Max reps",
+                    4,
+                    1,
+                    ""
+                ],
+                [
+                    198,
+                    "Long Jump Challenge",
+                    "Max distance long jump from standing position.",
+                    4,
+                    1,
+                    ""
+                ]
+            ]
+        },
+        {
+            "name": "results",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "id_exercise",
+                    "value": "INTEGER",
+                    "foreignkey": "exercises(id)"
+                },
+                {
+                    "column": "date",
+                    "value": "TEXT NOT NULL"
+                },
+                {
+                    "column": "result",
+                    "value": "TEXT"
+                },
+                {
+                    "column": "reps",
+                    "value": "INTEGER"
+                },
+                {
+                    "column": "comments",
+                    "value": "TEXT"
+                }
+            ],
+            "values": []
+        },
+        {
+            "name": "favorites",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "column": "id_exercise",
+                    "value": "INTEGER",
+                    "foreignkey": "exercises(id)"
+                },
+                {
+                    "column": "date",
+                    "value": "TEXT NOT NULL"
+                }
+            ],
+            "values": []
+        }
+    ]
+}

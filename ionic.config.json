@@ -1,0 +1,7 @@
+{
+  "name": "prchallenge",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

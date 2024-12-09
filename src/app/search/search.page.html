@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-grid>
+    <ion-row>
+      <!-- Filtro por texto -->
+      <ion-col size="8">
+        <ion-item>
+          <ion-searchbar color="light" [(ngModel)]="searchTerm" (ionInput)="filterExercises()"></ion-searchbar>
+        </ion-item>
+      </ion-col>
+
+      <!-- Filtro por tipo -->
+      <ion-col size="4">
+        <ion-item>
+          <ion-label>Tipo</ion-label>
+          <ion-select
+            [(ngModel)]="selectedType"
+            (ionChange)="filterExercises()"
+            interface="popover"
+            placeholder="Seleccionar tipo">
+            <ion-select-option value="Todos">Todos</ion-select-option>
+            <ion-select-option value="Pesos">Pesos</ion-select-option>
+            <ion-select-option value="Distancias">Distancias</ion-select-option>
+            <ion-select-option value="Bodybuilding">Bodybuilding</ion-select-option>
+            <ion-select-option value="Desafíos">Desafíos</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list *ngIf="filteredExercises.length > 0">
+    <ion-item *ngFor="let ejercicio of filteredExercises">
+      <ion-label>
+        <h2>{{ ejercicio.name }} - {{ getTypeName(ejercicio.id_type) }}</h2>
+        <p>{{ ejercicio.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
