@@ -10,38 +10,23 @@ import { Result } from '../interfaces/result'
 })
 export class HomePage {
 
-  public result: string;
-  public results: string[];
+  public result: Result;
+  public results: Result[];
   public exercises: Exercise[];
 
   constructor(
     private sqlite: SqliteService
   ) {
-    this.result = '';
-    this.results = [];
   }
 
-  // Al entrar, leemos la base de datos
   ionViewWillEnter(){
     this.readExercises();
-  }
-
-  create(){
-    // Creamos un elemento en la base de datos
-    this.sqlite.create(this.result.toUpperCase()).then( (changes) =>{
-      console.log(changes);
-      console.log("Creado");
-      this.result = '';
-      this.readResults(); // Volvemos a leer
-    }).catch(err => {
-      console.error(err);
-      console.error("Error al crear");
-    })
+    this.readResults();
   }
 
   readResults(){
     // Leemos los datos de la base de datos
-    this.sqlite.readResults().then( (results: string[]) => {
+    this.sqlite.readAllResults().then( (results: Result[]) => {
       this.results = results;
       console.log("Leido");
       console.log(this.results);
@@ -63,18 +48,18 @@ export class HomePage {
     })
   }
   
-  update(result: string){
-    // Actualizamos el elemento (result) por el nuevo elemento (this.result)
-    this.sqlite.update(this.result.toUpperCase(), result).then( (changes) => {
-      console.log(changes);
-      console.log("Actualizado");
-      this.result = '';
-      this.readResults(); // Volvemos a leer
-    }).catch(err => {
-      console.error(err);
-      console.error("Error al actualizar");
-    })
-  }
+  // update(result: string){
+  //   // Actualizamos el elemento (result) por el nuevo elemento (this.result)
+  //   this.sqlite.update(this.result.toUpperCase(), result).then( (changes) => {
+  //     console.log(changes);
+  //     console.log("Actualizado");
+  //     this.result = '';
+  //     this.readResults(); // Volvemos a leer
+  //   }).catch(err => {
+  //     console.error(err);
+  //     console.error("Error al actualizar");
+  //   })
+  // }
 
   delete(result: string){
     // Borramos el elemento

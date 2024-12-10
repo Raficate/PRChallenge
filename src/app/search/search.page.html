@@ -2,44 +2,46 @@
   <ion-toolbar>
     <ion-title>search</ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <ion-searchbar  [(ngModel)]="searchTerm" (ionInput)="filterExercises()"></ion-searchbar>
+        </ion-col>
+        <ion-col size="4">
+          <ion-item>
+            <ion-label>Tipo</ion-label>
+            <ion-select
+              [(ngModel)]="selectedType"
+              (ionChange)="filterExercises()"
+              interface="popover"
+              
+              placeholder="Seleccionar tipo">
+              <ion-select-option value="Todos">Todos</ion-select-option>
+              <ion-select-option value="Pesos">Pesos</ion-select-option>
+              <ion-select-option value="Distancias">Distancias</ion-select-option>
+              <ion-select-option value="Bodybuilding">Bodybuilding</ion-select-option>
+              <ion-select-option value="Desafíos">Desafíos</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   
-  <ion-grid>
-    <ion-row>
-      <!-- Filtro por texto -->
-      <ion-col size="8">
-        <ion-item>
-          <ion-searchbar color="light" [(ngModel)]="searchTerm" (ionInput)="filterExercises()"></ion-searchbar>
-        </ion-item>
-      </ion-col>
-
-      <!-- Filtro por tipo -->
-      <ion-col size="4">
-        <ion-item>
-          <ion-label>Tipo</ion-label>
-          <ion-select
-            [(ngModel)]="selectedType"
-            (ionChange)="filterExercises()"
-            interface="popover"
-            placeholder="Seleccionar tipo">
-            <ion-select-option value="Todos">Todos</ion-select-option>
-            <ion-select-option value="Pesos">Pesos</ion-select-option>
-            <ion-select-option value="Distancias">Distancias</ion-select-option>
-            <ion-select-option value="Bodybuilding">Bodybuilding</ion-select-option>
-            <ion-select-option value="Desafíos">Desafíos</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
   <ion-list *ngIf="filteredExercises.length > 0">
-    <ion-item *ngFor="let ejercicio of filteredExercises">
+    <ion-item *ngFor="let ejercicio of filteredExercises" (click)="openAddResult(ejercicio)" button>
       <ion-label>
-        <h2>{{ ejercicio.name }} - {{ getTypeName(ejercicio.id_type) }}</h2>
+        <h2>{{ ejercicio.name }} - {{ this.util.getTypeName(ejercicio.id_type) }}</h2>
         <p>{{ ejercicio.description }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
+  <ion-text *ngIf="filteredExercises.length === 0">
+    <p class="ion-padding">No se encontraron ejercicios que coincidan con los criterios de búsqueda.</p>
+  </ion-text>
 </ion-content>

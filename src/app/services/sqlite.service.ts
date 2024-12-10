@@ -126,10 +126,8 @@ export class SqliteService {
     return this.dbName;
   }
 
-  async create(result: string) {
-    // Sentencia para insertar un registro
-    let sql = 'INSERT INTO results VALUES(?)';
-    // Obtengo la base de datos
+  async createResult(result: Result) {
+    let sql = 'INSERT INTO results (id_exercise, result, reps, date, comments) VALUES (?, ?, ?, ?, ?)';
     const dbName = await this.getDbName();
     // Ejecutamos la sentencia
     return CapacitorSQLite.executeSet({
@@ -138,12 +136,15 @@ export class SqliteService {
         {
           statement: sql,
           values: [
-            result
+            result.id_exercise,
+            result.result,
+            result.reps,
+            result.date,
+            result.comments
           ]
         }
       ]
     }).then((changes: capSQLiteChanges) => {
-      // Si es web, debemos guardar el cambio en la webstore manualmente
       if (this.isWeb) {
         CapacitorSQLite.saveToStore({ database: dbName });
       }
@@ -151,7 +152,7 @@ export class SqliteService {
     }).catch(err => Promise.reject(err))
   }
 
-  async readResults() {
+  async readAllResults() {
     // Sentencia para leer todos los registros
     let sql = 'SELECT * FROM results';
     // Obtengo la base de datos
@@ -162,7 +163,7 @@ export class SqliteService {
       statement: sql,
       values: [] // necesario para android
     }).then((response: capSQLiteValues) => {
-      let results: string[] = [];
+      let results: Result[] = [];
 
       // Si es IOS y hay datos, elimino la primera fila
       // Esto se debe a que la primera fila es informacion de las tablas
@@ -173,13 +174,12 @@ export class SqliteService {
       // recorremos los datos
       for (let index = 0; index < response.values.length; index++) {
         const result = response.values[index];
-        results.push(result.name);
+        results.push(result);
       }
       return results;
 
     }).catch(err => Promise.reject(err))
   }
-
 
   async readAllExercises() {
     // Sentencia para leer todos los registros

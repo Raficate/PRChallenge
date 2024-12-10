@@ -1,0 +1,115 @@
+<!-- src/app/add-result/add-result.page.html -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Agregar Resultado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div *ngIf="ejercicio; else noData">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ ejercicio.name }}</ion-card-title>
+        <ion-card-subtitle>{{ util.getTypeName(ejercicio.id_type) }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ ejercicio.description }}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <form [formGroup]="resultForm" (ngSubmit)="submitResult()">
+      <div [ngSwitch]="ejercicio.id_measure">
+        
+        <!-- id_measure 1: Número decimal + selector de unidades -->
+        <div *ngSwitchCase="1">
+          <ion-item>
+            <ion-label position="stacked">Resultado (Decimal)</ion-label>
+            <ion-input type="text" formControlName="resultValue" required></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>Unidad</ion-label>
+            <ion-select formControlName="resultUnit" required>
+              <ion-select-option *ngFor="let unit of weightUnits" [value]="unit">{{ unit }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+        
+        <!-- id_measure 2: Formato hh:mm:ss -->
+        <div *ngSwitchCase="2">
+          <ion-item>
+            <ion-label position="stacked">Resultado (Horas:Minutos:Segundos)</ion-label>
+            <ion-datetime displayFormat="HH:mm:ss" pickerFormat="HH:mm:ss" formControlName="resultTime" required></ion-datetime>
+          </ion-item>
+          <ion-text color="medium">
+            <p>Hours-Minutes-Seconds</p>
+          </ion-text>
+        </div>
+        
+        <!-- id_measure 3: Formato mm:ss:SSS -->
+        <div *ngSwitchCase="3">
+          <ion-item>
+            <ion-label position="stacked">Resultado (Minutos:Segundos:Milisegundos)</ion-label>
+            <ion-input type="text" formControlName="resultTimeMs" placeholder="MM:SS:SSS" required></ion-input>
+          </ion-item>
+          <ion-text color="medium">
+            <p>Minutes-Seconds-Milliseconds</p>
+          </ion-text>
+        </div>
+        
+        <!-- id_measure 4: Selector Yes/No -->
+        <div *ngSwitchCase="4">
+          <ion-item>
+            <ion-label>Finish:</ion-label>
+            <ion-select formControlName="resultFinish" required>
+              <ion-select-option *ngFor="let option of finishOptions" [value]="option">{{ option }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+        
+        <!-- id_measure 5: Rounds con solo números enteros -->
+        <div *ngSwitchCase="5">
+          <ion-item>
+            <ion-label position="stacked">Rounds:</ion-label>
+            <ion-input type="number" formControlName="resultRounds" required></ion-input>
+          </ion-item>
+        </div>
+        
+        <!-- Default: Sin campos adicionales -->
+        <div *ngSwitchDefault>
+          <ion-text color="danger">
+            <p>id_measure no reconocido. No se pueden agregar resultados para este ejercicio.</p>
+          </ion-text>
+        </div>
+      </div>
+
+      <ion-item>
+        <ion-label position="stacked">Repeticiones</ion-label>
+        <ion-input type="number" formControlName="reps" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Fecha</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" formControlName="date" required></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Comentarios</ion-label>
+        <ion-textarea formControlName="comments"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="full" type="submit" [disabled]="!resultForm.valid" class="ion-margin-top">
+        Guardar Resultado
+      </ion-button>
+    </form>
+
+
+
+  </div>
+  
+  <ng-template #noData>
+    <ion-text color="danger">
+      <p>No se recibió ningún ejercicio seleccionado.</p>
+    </ion-text>
+  </ng-template>
+</ion-content>

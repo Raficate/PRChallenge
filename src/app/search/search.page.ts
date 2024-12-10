@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SqliteService } from '../services/sqlite.service';
+import { UtilService } from '../services/util.service';
 import { Exercise } from '../interfaces/exercise'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -15,7 +17,7 @@ export class SearchPage implements OnInit {
   public searchTerm: string = '';
   public selectedType: string = 'Todos';
 
-  constructor(private sqlite: SqliteService) { }
+  constructor(private sqlite: SqliteService, public util: UtilService, private router: Router) { }
 
   async ngOnInit() {  
     await this.loadExercises();
@@ -29,11 +31,7 @@ export class SearchPage implements OnInit {
       const ejerciciosDesafios = await this.sqlite.readExercisesType4()
 
       const types = await this.sqlite.readTypes('1 = 1')
-      console.log(types)
-      // console.log(ejerciciosPesos)
-      // console.log(ejerciciosDistancias)
-      // console.log(ejerciciosBodyBuilding)
-      // console.log(ejerciciosDesafios)
+
       this.exercises = ejerciciosPesos.concat(ejerciciosDistancias, ejerciciosBodyBuilding, ejerciciosDesafios);
       this.sortExercisesAlphabetically();
       this.filterExercises();
@@ -108,5 +106,9 @@ export class SearchPage implements OnInit {
       default:
         return 0; // 0 puede representar "Todos" o un valor no válido
     }
+  }
+
+  openAddResult(ejercicio: Exercise) {
+    this.router.navigate(['add-result'], { state: { ejercicio } });
   }
 }
